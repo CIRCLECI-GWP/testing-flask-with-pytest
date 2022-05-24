@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  python: circleci/python@2.0.3
+  python: circleci/python@1.5.0
 
 workflows:
   sample:

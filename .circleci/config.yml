@@ -1,11 +1,6 @@
 version: 2.1
 orbs:
   python: circleci/python@1.5.0
-
-workflows:
-  sample:
-    jobs:
-      - build-and-test
 jobs:
   build-and-test:
     docker:
@@ -16,4 +11,8 @@ jobs:
           pkg-manager: pip
       - run:
           name: Run tests
-          command: python -m pytest
+          command: pytest
+workflows:
+  sample:
+    jobs:
+      - build-and-test
